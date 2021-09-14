@@ -26,7 +26,7 @@ int main(){
 
     cout << "Generated Password: ";
 
-    for(int i = 0; i < lengthOfCharacters; i++){
+    for(int i = 0; i < lengthOfPassword; i++){
         cout << characters[rand() % lengthOfCharacters];
 
     }
