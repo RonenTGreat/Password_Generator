@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib> // Will use it to create random function
+#include <ctime>
 
 using namespace std;
 
