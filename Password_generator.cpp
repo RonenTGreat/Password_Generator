@@ -18,8 +18,8 @@ int main(){
 
     int lengthOfPassword;
 
-    cin >> lengthOfCharacters;
-    cout << "The length of password you want is " << lengthOfPassword << endl;
+    cin >> lengthOfPassword;
+    cout << "The length of password you want is " << lengthOfPassword<< endl;
     cout << endl;
 
     srand(time(0)); // Uses the current time of the computer as the seed
