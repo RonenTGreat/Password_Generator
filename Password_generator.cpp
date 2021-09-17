@@ -14,16 +14,17 @@ int main(){
 
     int lengthOfCharacters = sizeof(characters) - 1;
     int lengthOfPassword;
-    bool run = true;
 
-    while(run){
+
+    while(true){
         cout << "Enter the length you want the password to be or Enter \"0\" to quit program: " << endl;
 
         cin >> lengthOfPassword;
-        cout << "The length of password you want is " << lengthOfPassword<< endl;
-        cout << endl;
+
 
         if(lengthOfPassword >= 8){
+            cout << "The length of password you want is " << lengthOfPassword<< endl;
+            cout << endl;
             srand(time(nullptr)); // Uses the current time of the computer as the seed
 
             cout << "Generated Password: ";
