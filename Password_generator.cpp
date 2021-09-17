@@ -10,30 +10,36 @@ int main(){
                                'w', '5', '6', '7', '8', '9', '0', '!','%', '^', '&', '*', '=', '?', 'h', 'i',
                                'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r','x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F',
                                'G', 'H', 'I','J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R','S', 'T', 'U', 'V', 'W', 'X',
-                               'Y', 'Z',};
+                               'Y', 'Z'};
 
     int lengthOfCharacters = sizeof(characters) - 1;
-
-    cout << "Enter the length you want the password to be: " << endl;
-
     int lengthOfPassword;
+    bool run = true;
 
-    cin >> lengthOfPassword;
-    cout << "The length of password you want is " << lengthOfPassword<< endl;
-    cout << endl;
+    while(run){
+        cout << "Enter the length you want the password to be or Enter \"0\" to quit program: " << endl;
 
-    srand(time(nullptr)); // Uses the current time of the computer as the seed
+        cin >> lengthOfPassword;
+        cout << "The length of password you want is " << lengthOfPassword<< endl;
+        cout << endl;
 
-    cout << "Generated Password: ";
+        if(lengthOfPassword >= 8){
+            srand(time(nullptr)); // Uses the current time of the computer as the seed
 
-    for(int i = 0; i < lengthOfPassword; i++){
-        cout << characters[rand() % lengthOfCharacters];
+            cout << "Generated Password: ";
 
+            for(int i = 0; i < lengthOfPassword; i++){
+                cout << characters[rand() % lengthOfCharacters];
+
+            }
+            cout << endl;
+        }
+        else if( lengthOfPassword == 0)
+            break;
+        else{
+            cout << "The length of your password is too short. The minimum length is 8." << endl;
+        }
     }
-
-
-
-
 
     return 0;
 }
